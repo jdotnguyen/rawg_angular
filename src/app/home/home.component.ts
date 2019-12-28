@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeService } from 'src/shared/services/home.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 // Import interface
 import { HomeGame } from 'src/shared/interfaces/home';
@@ -15,6 +16,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private _homeService: HomeService
+    , private _router: Router
   ) { }
 
   ngOnInit() {
@@ -26,4 +28,8 @@ export class HomeComponent implements OnInit {
       error => {console.log(error)});
   }
 
+  // Go to specific game page
+  viewGame(game) {
+    this._router.navigate(['/game'], { queryParams: {id: game.id} });
+  }
 }

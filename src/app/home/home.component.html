@@ -1,16 +1,25 @@
-<div class="container">
-    <!-- Game cards -->
-    <div class="row">
-        <ng-container *ngFor="let game of latestGamesArray">
-            <div class="col-4">
-                <div class="game-card">
-                    <div class="game-title">{{ game.name }}</div>
+<!-- Game cards -->
+<div class="row">
+    <ng-container *ngFor="let game of latestGamesArray">
+        <div class="col-4">
+            <div class="game-card" (click)="viewGame(game)">
+                <div class="game-title">{{ game.name }}</div>
+                <div class="game-rating" 
+                    [ngClass]="{'success': game.metacritic >= 75, 'warning': (game.metacritic >= 50 && game.metacritic < 75), 'danger': game.metacritic < 50}">
+                    {{ game.metacritic ? game.metacritic : '-' }}
+                </div>
 
-                    <div class="game-image">
-                        <img src="{{ game.background_image }}">
+                <div class="game-image">
+                    <img src="{{ game.background_image }}">
+                </div>
+
+                <div class="game-info-body">
+                    <div class="game-release-date">{{ game.released }}</div>
+                    <div class="game-info-more">
+                        >
                     </div>
                 </div>
             </div>
-        </ng-container>
-    </div>
+        </div>
+    </ng-container>
 </div>

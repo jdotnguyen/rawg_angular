@@ -29,5 +29,4 @@ export interface HomeGame {
     stores: [];
     clip: {};
     short_screenshots: [];
-    
 }

@@ -18,4 +18,6 @@ export interface Game {
     parent_platforms: [];
     genres: [];
     developers: [];
+    publishers: [];
+    esrb_rating: any;
 }

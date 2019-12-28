@@ -11,10 +11,21 @@
                 <div class="game-cover">
                     <img src="{{ gameDetails.background_image_additional }}">
                 </div>
+                <div class="game-esrb">{{ gameDetails.esrb_rating.name }}</div>
                 <div class="game-description" [innerHTML]="gameDetails.description"></div>
             </div>
         </div>
         <div class="col-3">
+            <!-- Publishers -->
+            <div class="game-card">
+                <div class="game-title">Publishers</div>
+                <div class="game-rating-body">
+                    <ul>
+                        <li *ngFor="let publisher of gameDetails.publishers">{{ publisher.name }}</li>
+                    </ul>
+                </div>
+            </div>
+
             <!-- Developers -->
             <div class="game-card">
                 <div class="game-title">Developers</div>

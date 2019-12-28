@@ -1,0 +1,46 @@
+/* Navigation */
+.back-btn {
+    margin-bottom:20px;
+
+    a {
+        font-size:20px;
+        color:#3498db;
+        font-weight:bold;
+        text-decoration: none;
+    }
+}
+
+/* Game card */
+.game-card {
+    padding: 10px;
+    box-shadow: 0 1px 2px #aaa;
+    position: relative;
+    margin-bottom: 30px;
+
+    .game-title {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .game-rating {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        padding: 2px 10px;
+        background-color: #2ecc71;
+        color: #ffffff;
+        border-radius: 100px;
+    }
+
+    .game-cover {
+        img {
+            width: 100%;
+        }
+    }
+
+    .game-description {
+        p {
+            font-size: 16px;
+        }
+    }
+}

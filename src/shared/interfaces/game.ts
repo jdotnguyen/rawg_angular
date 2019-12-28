@@ -14,4 +14,8 @@ export interface Game {
     rating: number;
     rating_top: number;
     ratings: [];
+    reddit_url: string;
+    parent_platforms: [];
+    genres: [];
+    developers: [];
 }

@@ -1,3 +1,70 @@
+<div class="back-btn">
+    <a [routerLink]="['/home']">Back</a>
+</div>
 <ng-container *ngIf="gameDetails">
-    {{ gameDetails.name }}
+    <div class="row">
+        <div class="col-9">
+            <!-- Game info -->
+            <div class="game-card">
+                <div class="game-title">{{ gameDetails.name }}</div>
+                <div class="game-rating">{{ gameDetails.metacritic }}</div>
+                <div class="game-cover">
+                    <img src="{{ gameDetails.background_image_additional }}">
+                </div>
+                <div class="game-description" [innerHTML]="gameDetails.description"></div>
+            </div>
+        </div>
+        <div class="col-3">
+            <!-- Developers -->
+            <div class="game-card">
+                <div class="game-title">Developers</div>
+                <div class="game-rating-body">
+                    <ul>
+                        <li *ngFor="let developer of gameDetails.developers">{{ developer.name }}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Platforms -->
+            <div class="game-card">
+                <div class="game-title">Platforms</div>
+                <div class="game-rating-body">
+                    <ul>
+                        <li *ngFor="let platform of gameDetails.parent_platforms">{{ platform.platform.name }}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Genres -->
+            <div class="game-card">
+                <div class="game-title">Genres</div>
+                <div class="game-rating-body">
+                    <ul>
+                        <li *ngFor="let genre of gameDetails.genres">{{ genre.name }}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Reviews -->
+            <div class="game-card">
+                <div class="game-title">Reviews</div>
+                <div class="game-rating-body">
+                    <ul>
+                        <li>RAWG API: {{ gameDetails.rating }}</li>
+                        <li>Metacritic: {{ gameDetails.metacritic }}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Social Media-->
+            <div class="game-card">
+                <div class="game-title">Social Media</div>
+                <div class="game-rating-body">
+                    <ul>
+                        <li><a href="{{ gameDetails.reddit_url }}" target="_blank">Reddit</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>    
 </ng-container>

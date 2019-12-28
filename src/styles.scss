@@ -265,3 +265,8 @@ $breakpoint-large: 60em; // 960px
     display: block;
   }
 }
+
+/* Fix row */
+.row {
+  margin: 0 -2%;
+}

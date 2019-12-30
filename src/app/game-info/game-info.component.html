@@ -1,5 +1,5 @@
 <div class="back-btn">
-    <a [routerLink]="['/home']">Back</a>
+    <a (click)="goBack()">Back</a>
 </div>
 <ng-container *ngIf="gameDetails">
     <div class="row">

@@ -1,7 +1,3 @@
-export interface Home {
-    
-}
-
 export interface HomeGame {
     id: number;
     slug: string;

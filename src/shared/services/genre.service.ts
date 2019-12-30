@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class GameService {
+export class GenreService {
   // Base URL
   baseUrl: string = 'https://api.rawg.io/api/'
 
@@ -12,8 +12,8 @@ export class GameService {
     private http: HttpClient
   ) { }
 
-  getGameDetails(gameId) {
-    let endpoint = `${this.baseUrl}games/${gameId}`;
+  getGenres() {
+    let endpoint = `${this.baseUrl}genres`;
 
     return this.http.get(endpoint);
   }

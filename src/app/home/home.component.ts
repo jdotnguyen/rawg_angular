@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HomeService } from 'src/shared/services/home.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 // Import interface
 import { HomeGame } from 'src/shared/interfaces/home';
